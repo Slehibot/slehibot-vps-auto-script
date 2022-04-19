@@ -1,0 +1,79 @@
+#!/bin/bash
+
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+BLUE="\e[34m"
+CYAN="\e[36m"
+ENDCOLOR="\e[0m"
+
+pub_ip=$(wget -qO- https://ipecho.net/plain ; echo)
+
+old_db_port=$(grep "DROPBEAR_PORT=" /etc/default/dropbear | sed 's/=/= /'  | awk '{print$2}')
+
+old_db_ssl=$(grep "accept =" /etc/stunnel/stunnel.conf | sed ':a;N;$!ba;s/\n/ /g' | sed 's/accept =//g' | awk '{print$1}')
+
+old_op_ssl=$(grep "accept =" /etc/stunnel/stunnel.conf | sed ':a;N;$!ba;s/\n/ /g' | sed 's/accept =//g' | awk '{print$2}')
+
+old_squid_port=$(sed /^#/d /etc/squid/squid.conf | grep "http_port" | awk '{print$2}')
+
+old_udpgw_port=$(cat /etc/systemd/system/udpgw.service | sed 's/ /\n/g'  | grep "127.0.0.1:" | sed 's/:/ /' | awk '{print$2}')
+
+if ! [ $(id -u) = 0 ]; then
+   echo -e "${RED}Plese run the command with root privilages!${ENDCOLOR}"
+   exit 1
+fi
+
+clear                                                            
+echo -e "██╗  ██╗██╗███╗   ██╗ ██████╗"      
+echo -e "██║ ██╔╝██║████╗  ██║██╔════╝"      
+echo -e "█████╔╝ ██║██╔██╗ ██║██║  ███╗"
+echo -e "██╔═██╗ ██║██║╚██╗██║██║   ██║"
+echo -e "██║  ██╗██║██║ ╚████║╚██████╔╝"
+echo -e "╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝"  
+echo -e "               █████╗ ███╗   ███╗██████╗  █████╗"      
+echo -e "              ██╔══██╗████╗ ████║██╔══██╗██╔══██╗"      
+echo -e "              ███████║██╔████╔██║██║  ██║███████║"
+echo -e "              ██╔══██║██║╚██╔╝██║██║  ██║██╔══██║"
+echo -e "              ██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║"
+echo -e "              ╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝"  
+echo -e "${YELLOW}=========>>> King Amda SSH PANEL <<<=========\n"
+echo -e "${RED}|  Make By-                                  |\n"
+echo -e "${GREEN}|       #>>Pasindu Samarasingha              |\n"
+echo -e "${YELLOW}|--------------------------------------------|\n"
+echo -e "${CYAN}|    >>>>>>>42 Set Eka Team Work<<<<<<<      |\n"
+echo -e "${YELLOW}=============================================\n\n"
+echo -e "${YELLOW}-------- Server Details -----------\n"
+echo -e "${GREEN}>>>IP : $pub_ip"
+echo -e ">>>Dropbear port : $old_db_port"
+echo -e ">>>Dropbear + SSL port : $old_db_ssl"
+echo -e ">>>Openssh +  SSL port : $old_op_ssl"
+echo -e ">>>Squid port : $old_squid_port"
+echo -e ">>>BadVPN UDP Gateway port : $old_udpgw_port\n"
+echo -e "${RED}-----------------------------------\n"
+echo -e "${CYAN}  [1] ${YELLOW}Add new users"
+echo -e "${CYAN}  [2] ${YELLOW}View All users"
+echo -e "${CYAN}  [3] ${YELLOW}Edit an existing user"
+echo -e "${CYAN}  [4] ${YELLOW}Delete a user"
+echo -e "${CYAN}  [5] ${YELLOW}Change Ports"
+echo -e "${CYAN}  [6] ${YELLOW}Edit SSH Banner"
+echo -e "${CYAN}  [7] ${YELLOW}Server Information"
+echo -e "${CYAN}  [8] ${YELLOW}Server Speedtest"
+echo -e "${CYAN}  [9] ${YELLOW}Remove Script"
+echo -e "${CYAN}  [10]${YELLOW}Exit"
+
+echo -ne "${GREEN}\nSelect Operation : ${ENDCOLOR}" ;read n
+
+case $n in
+  1) /etc/King-Amda-VPS/UserManager.sh;;
+  2) /etc/King-Amda-VPS/ListUsers.sh;;
+  3) /etc/King-Amda-VPS/ChangeUser.sh;;
+  4) /etc/King-Amda-VPS/DelUser.sh;;
+  5) /etc/King-Amda-VPS/ChangePorts.sh;;
+  6) /etc/King-Amda-VPS/Banner.sh;;
+  7) clear && screenfetch -p || echo -e "${RED}Screenfetch not installed. please install${ENDCOLOR}"; echo -e "\nPress Enter to return back to the menu";read;menu;;  
+  8) clear && python3 /etc/King-Amda-VPS/speedtest-cli || echo -e "${RED}Python3 or speedtest-cli not installed. please install${ENDCOLOR}"; echo -e "\nPress Enter to return back to the menu";read;menu;;
+  9) /etc/King-Amda-VPS/RemoveScript.sh;;
+  10) clear;exit;;
+  *) echo -e "${RED}\nInvalid Option. Press Enter to return back to the menu${ENDCOLOR}";read && menu;;
+esac
