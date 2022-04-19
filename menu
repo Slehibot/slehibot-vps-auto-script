@@ -26,8 +26,7 @@ fi
 
 clear
 echo -e "${YELLOW}=========>>> SLEHIBOT SSH PANEL <<<=========\n"
-echo -e "${RED}|  Make By-                                  |\n"
-echo -e "${GREEN}|       #>> Lakmal Sandaru <<             |\n"
+echo -e "${GREEN}| Make By: >> Lakmal Sandaru <<             |\n"
 echo -e "${YELLOW}=============================================\n\n"
 echo -e "${YELLOW}-------- Server Details -----------\n"
 echo -e "${GREEN}>>>IP : $pub_ip"
