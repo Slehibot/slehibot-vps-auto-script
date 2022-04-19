@@ -171,33 +171,33 @@ EOF
 }
 fun_panel()
 {
-mkdir /etc/King-Amda-VPS
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/ChangeUser.sh
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/ChangePorts.sh
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/UserManager.sh
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/Banner.sh
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/DelUser.sh
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/ListUsers.sh
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/etc/RemoveScript.sh
+mkdir /etc/slehibot-vps-auto-script
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/ChangeUser.sh
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/ChangePorts.sh
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/UserManager.sh
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/Banner.sh
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/DelUser.sh
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/ListUsers.sh
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/etc/RemoveScript.sh
 wget -O speedtest-cli https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
-wget https://raw.githubusercontent.com/TechKnowLK/King-Amda-VPS/main/menu
-mv ChangeUser.sh /etc/King-Amda-VPS/ChangeUser.sh
-mv ChangePorts.sh /etc/King-Amda-VPS/ChangePorts.sh
-mv UserManager.sh /etc/King-Amda-VPS/UserManager.sh
-mv Banner.sh /etc/King-Amda-VPS/Banner.sh
-mv DelUser.sh /etc/King-Amda-VPS/DelUser.sh
-mv ListUsers.sh /etc/King-Amda-VPS/ListUsers.sh
-mv RemoveScript.sh /etc/King-Amda-VPS/RemoveScript.sh
-mv speedtest-cli /etc/King-Amda-VPS/speedtest-cli
+wget https://raw.githubusercontent.com/Slehibot/slehibot-vps-auto-script/main/menu
+mv ChangeUser.sh /etc/slehibot-vps-auto-script/ChangeUser.sh
+mv ChangePorts.sh /etc/slehibot-vps-auto-script/ChangePorts.sh
+mv UserManager.sh /etc/slehibot-vps-auto-script/UserManager.sh
+mv Banner.sh /etc/slehibot-vps-auto-script/Banner.sh
+mv DelUser.sh /etc/slehibot-vps-auto-script/DelUser.sh
+mv ListUsers.sh /etc/slehibot-vps-auto-script/ListUsers.sh
+mv RemoveScript.sh /etc/slehibot-vps-auto-script/RemoveScript.sh
+mv speedtest-cli /etc/slehibot-vps-auto-script/speedtest-cli
 mv menu /usr/local/bin/menu
-chmod +x /etc/King-Amda-VPS/ChangeUser.sh
-chmod +x /etc/King-Amda-VPS/ChangePorts.sh
-chmod +x /etc/King-Amda-VPS/UserManager.sh
-chmod +x /etc/King-Amda-VPS/Banner.sh
-chmod +x /etc/King-Amda-VPS/DelUser.sh
-chmod +x /etc/King-Amda-VPS/ListUsers.sh
-chmod +x /etc/King-Amda-VPS/RemoveScript.sh
-chmod +x /etc/King-Amda-VPS/speedtest-cli
+chmod +x /etc/slehibot-vps-auto-script/ChangeUser.sh
+chmod +x /etc/slehibot-vps-auto-script/ChangePorts.sh
+chmod +x /etc/slehibot-vps-auto-script/UserManager.sh
+chmod +x /etc/slehibot-vps-auto-script/Banner.sh
+chmod +x /etc/slehibot-vps-auto-script/DelUser.sh
+chmod +x /etc/slehibot-vps-auto-script/ListUsers.sh
+chmod +x /etc/slehibot-vps-auto-script/RemoveScript.sh
+chmod +x /etc/slehibot-vps-auto-script/speedtest-cli
 chmod +x /usr/local/bin/menu
 }
 fun_service_start()

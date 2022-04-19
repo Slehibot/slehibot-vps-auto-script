@@ -24,24 +24,10 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 
-clear                                                            
-echo -e "██╗  ██╗██╗███╗   ██╗ ██████╗"      
-echo -e "██║ ██╔╝██║████╗  ██║██╔════╝"      
-echo -e "█████╔╝ ██║██╔██╗ ██║██║  ███╗"
-echo -e "██╔═██╗ ██║██║╚██╗██║██║   ██║"
-echo -e "██║  ██╗██║██║ ╚████║╚██████╔╝"
-echo -e "╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝"  
-echo -e "               █████╗ ███╗   ███╗██████╗  █████╗"      
-echo -e "              ██╔══██╗████╗ ████║██╔══██╗██╔══██╗"      
-echo -e "              ███████║██╔████╔██║██║  ██║███████║"
-echo -e "              ██╔══██║██║╚██╔╝██║██║  ██║██╔══██║"
-echo -e "              ██║  ██║██║ ╚═╝ ██║██████╔╝██║  ██║"
-echo -e "              ╚═╝  ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝"  
-echo -e "${YELLOW}=========>>> King Amda SSH PANEL <<<=========\n"
+clear
+echo -e "${YELLOW}=========>>> SLEHIBOT SSH PANEL <<<=========\n"
 echo -e "${RED}|  Make By-                                  |\n"
-echo -e "${GREEN}|       #>>Pasindu Samarasingha              |\n"
-echo -e "${YELLOW}|--------------------------------------------|\n"
-echo -e "${CYAN}|    >>>>>>>42 Set Eka Team Work<<<<<<<      |\n"
+echo -e "${GREEN}|       #>> Lakmal Sandaru <<             |\n"
 echo -e "${YELLOW}=============================================\n\n"
 echo -e "${YELLOW}-------- Server Details -----------\n"
 echo -e "${GREEN}>>>IP : $pub_ip"
@@ -65,15 +51,15 @@ echo -e "${CYAN}  [10]${YELLOW}Exit"
 echo -ne "${GREEN}\nSelect Operation : ${ENDCOLOR}" ;read n
 
 case $n in
-  1) /etc/King-Amda-VPS/UserManager.sh;;
-  2) /etc/King-Amda-VPS/ListUsers.sh;;
-  3) /etc/King-Amda-VPS/ChangeUser.sh;;
-  4) /etc/King-Amda-VPS/DelUser.sh;;
-  5) /etc/King-Amda-VPS/ChangePorts.sh;;
-  6) /etc/King-Amda-VPS/Banner.sh;;
+  1) /etc/slehibot-vps-auto-script/UserManager.sh;;
+  2) /etc/slehibot-vps-auto-script/ListUsers.sh;;
+  3) /etc/slehibot-vps-auto-script/ChangeUser.sh;;
+  4) /etc/slehibot-vps-auto-script/DelUser.sh;;
+  5) /etc/slehibot-vps-auto-script/ChangePorts.sh;;
+  6) /etc/slehibot-vps-auto-script/Banner.sh;;
   7) clear && screenfetch -p || echo -e "${RED}Screenfetch not installed. please install${ENDCOLOR}"; echo -e "\nPress Enter to return back to the menu";read;menu;;  
-  8) clear && python3 /etc/King-Amda-VPS/speedtest-cli || echo -e "${RED}Python3 or speedtest-cli not installed. please install${ENDCOLOR}"; echo -e "\nPress Enter to return back to the menu";read;menu;;
-  9) /etc/King-Amda-VPS/RemoveScript.sh;;
+  8) clear && python3 /etc/slehibot-vps-auto-script/speedtest-cli || echo -e "${RED}Python3 or speedtest-cli not installed. please install${ENDCOLOR}"; echo -e "\nPress Enter to return back to the menu";read;menu;;
+  9) /etc/slehibot-vps-auto-script/RemoveScript.sh;;
   10) clear;exit;;
   *) echo -e "${RED}\nInvalid Option. Press Enter to return back to the menu${ENDCOLOR}";read && menu;;
 esac
