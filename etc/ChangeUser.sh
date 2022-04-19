@@ -27,14 +27,20 @@ clear &&
 echo -e "${RED}===================" &&
 echo -e "${GREEN}꧁SLEHIBOT-SSH꧂" &&
 echo -e "${RED}===================" &&
-echo -e "${GREEN}\nIP :${YELLOW} $(wget -q0- https://ipecho.net/plain; echo)- " &&
-echo -e "${GREEN}\nUsername :${YELLOW} $username" &&
-echo -e "${GREEN}\nPassword :${YELLOW} $password" &&
+echo -e "${GREEN}\nIP :${YELLOW} $pub_ip" 
+echo -e "${GREEN}\nUsername :${YELLOW} $username" 
+echo -e "${GREEN}\nPassword :${YELLOW} $password" 
 echo -e "${GREEN}\nExpire Date :${YELLOW} $exd ${ENDCOLOR}" &&
-echo -e "${GREEN} \nOpenSSH Port :${YELLOW} 22" 
-echo -e "${GREEN} \nSSL Port :${YELLOW} 443" 
-echo -e "${GREEN} \nDropbear Port :${YELLOW} 80" 
-echo -e "${GREEN} \nProxy Port :${YELLOW} 8080" ||
+echo -e "${GREEN}෴Default  Server Ports෴" 
+echo -e "${GREEN} ★ OpenSSH Port : 22" 
+echo -e "${GREEN} ★ SSL Port : 443" 
+echo -e "${GREEN} ★ Dropbear Port : 80" 
+echo -e "${GREEN} ★ Proxy Port : 8080" 
+echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱" 
+echo -e "${GREEN} ★ Badvpn : 7300" 
+echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱" 
+echo -e "${GREEN} ☬[⍣]  SL EHI BOT [⍣]☬" 
+ ||
 echo -e "${RED}\nFailed to modify user $username please try again.${ENDCOLOR}"
 
 #return to panel
