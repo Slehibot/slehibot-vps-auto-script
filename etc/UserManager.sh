@@ -24,9 +24,10 @@ echo -ne "Enter No. of Days till expiration : ";read nod
 exd=$(date +%F  -d "$nod days")
 useradd -e $exd -M -N -s /bin/false $username && echo "$username:$password" | chpasswd &&
 clear &&
-echo -e "${RED}==============" &&
-echo -e "${GREEN}User Detail" &&
-echo -e "${RED}==============" &&
+echo -e "${RED}===================" &&
+echo -e "${GREEN}꧁SLEHIBOT-SSH꧂" &&
+echo -e "${RED}===================" &&
+echo -e "${GREEN}\nIP :${YELLOW} $pub_ip" &&
 echo -e "${GREEN}\nUsername :${YELLOW} $username" &&
 echo -e "${GREEN}\nPassword :${YELLOW} $password" &&
 echo -e "${GREEN}\nExpire Date :${YELLOW} $exd ${ENDCOLOR}" ||
