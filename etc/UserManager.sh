@@ -9,6 +9,11 @@ ENDCOLOR="\e[0m"
 
 clear
 
+#public ip
+
+pub_ip=$(wget -qO- https://ipecho.net/plain ; echo)
+
+
 #add users
 
 echo -ne "${YELLOW}Enter the username : "; read username
@@ -28,7 +33,7 @@ IP=$(wget -qO- ipv4.icanhazip.com)
 echo -e "${YELLOW}===================" &&
 echo -e "${GREEN}꧁SLEHIBOT-SSH꧂      "    &&
 echo -e "${YELLOW}===================" &&
-echo -e "${GREEN}\nIP :${YELLOW} $IP" 
+echo -e "${GREEN}\nIP :${YELLOW} $pub_ip" 
 echo -e "${GREEN}\nUsername :${YELLOW} $username" 
 echo -e "${GREEN}\nPassword :${YELLOW} $password" 
 echo -e "${GREEN}\nExpire Date :${YELLOW} $exd ${ENDCOLOR}" &&
