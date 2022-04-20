@@ -24,10 +24,11 @@ echo -ne "Enter No. of Days till expiration : ";read nod
 exd=$(date +%F  -d "$nod days")
 useradd -e $exd -M -N -s /bin/false $username && echo "$username:$password" | chpasswd &&
 clear &&
+IP=$(wget -qO- ipv4.icanhazip.com)
 echo -e "${YELLOW}===================" &&
 echo -e "${GREEN}꧁SLEHIBOT-SSH꧂      "    &&
 echo -e "${YELLOW}===================" &&
-echo -e "${GREEN}\nIP :${YELLOW} $pub_ip" 
+echo -e "${GREEN}\nIP :${YELLOW} $IP" 
 echo -e "${GREEN}\nUsername :${YELLOW} $username" 
 echo -e "${GREEN}\nPassword :${YELLOW} $password" 
 echo -e "${GREEN}\nExpire Date :${YELLOW} $exd ${ENDCOLOR}" &&
