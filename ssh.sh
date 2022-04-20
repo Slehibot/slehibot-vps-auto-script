@@ -217,8 +217,8 @@ sudo systemctl enable udpgw
 sudo systemctl restart udpgw
 }
 echo -ne "${YELLOW}=============================================\n"
-echo -ne "${YELLOW}>>>>>>>>SL EHI BOT VPS Script Installing<<<<<<<\n\n\n"
-echo -ne "${GREEN}Installing SL EHI BOT required packages ......."
+echo -ne "${YELLOW}>>>>>>>>SLEHIBOT VPS Script Installing<<<<<<<\n\n\n"
+echo -ne "${GREEN}Installing SLEHIBOT Script required packages ......."
 pre_req >/dev/null 2>&1 &
 spinner
 echo -ne "\tdone"
@@ -230,7 +230,7 @@ echo -ne "\n${YELLOW}Compiling and installing Badvpn UDP Gateway ......."
 fun_udpgw >/dev/null 2>&1 &
 spinner
 echo -ne "\tdone"
-echo -ne "\n${CYAN}Installing SLEHIBOT Panel ........"
+echo -ne "\n${CYAN}Installing SLEHIBOT Script Panel ........"
 fun_panel >/dev/null 2>&1 &
 spinner
 echo -ne "\tdone"
