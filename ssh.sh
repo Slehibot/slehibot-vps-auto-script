@@ -217,7 +217,7 @@ sudo systemctl enable udpgw
 sudo systemctl restart udpgw
 }
 echo -ne "${YELLOW}=============================================\n"
-echo -ne "${RED}>>>>>>>>SL EHI BOT VPS Script Installing<<<<<<<\n\n\n"
+echo -ne "${YELLOW}>>>>>>>>SL EHI BOT VPS Script Installing<<<<<<<\n\n\n"
 echo -ne "${GREEN}Installing SL EHI BOT required packages ......."
 pre_req >/dev/null 2>&1 &
 spinner
@@ -230,7 +230,7 @@ echo -ne "\n${YELLOW}Compiling and installing Badvpn UDP Gateway ......."
 fun_udpgw >/dev/null 2>&1 &
 spinner
 echo -ne "\tdone"
-echo -ne "\n${CYAN}Installing Panel ........"
+echo -ne "\n${CYAN}Installing SLEHIBOT Panel ........"
 fun_panel >/dev/null 2>&1 &
 spinner
 echo -ne "\tdone"
@@ -267,5 +267,5 @@ echo -e "${GREEN}\nExpire Date :${YELLOW} $exd ${ENDCOLOR}" ||
 echo -e "${RED}\nFailed to add default user $username please try again.${ENDCOLOR}"
 
 #exit script
-echo -e "\n${CYAN}Script installed. You can access the panel using 'menu' command. ${ENDCOLOR}\n"
+echo -e "\n${CYAN}SLEHIBOT Auto Script installed. You can access the panel using 'menu' command. ${ENDCOLOR}\n"
 echo -e "\nPress Enter key to exit"; read
