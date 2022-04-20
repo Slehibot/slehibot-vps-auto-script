@@ -17,7 +17,9 @@ old_op_ssl=$(grep "accept =" /etc/stunnel/stunnel.conf | sed ':a;N;$!ba;s/\n/ /g
 
 old_squid_port=$(sed /^#/d /etc/squid/squid.conf | grep "http_port" | awk '{print$2}')
 
-old_udpgw_port=$(cat /etc/systemd/system/udpgw.service | sed 's/ /\n/g'  | grep "127.0.0.1:" | sed 's/:/ /' | awk '{print$2}')
+old_udpgw_port=$(cat /etc/systemd/system/udpgw.service | sed 's/ /\n/g'  | grep "127.0.0.1:" | sed 's/:/ /' | awk '{print$2}') 
+
+online_member=$(http://$pub_ip:8888/server/online)
 
 if ! [ $(id -u) = 0 ]; then
    echo -e "${RED}Plese run the command with root privilages!${ENDCOLOR}"
@@ -35,6 +37,7 @@ echo -e ">>>Dropbear + SSL port : $old_db_ssl"
 echo -e ">>>Openssh +  SSL port : $old_op_ssl"
 echo -e ">>>Squid port : $old_squid_port"
 echo -e ">>>BadVPN UDP Gateway port : $old_udpgw_port\n"
+echo -e ">>>Server Online : $online_member\n"
 echo -e "${RED}-----------------------------------\n"
 echo -e "${CYAN}  [1] ${YELLOW}Add new users"
 echo -e "${CYAN}  [2] ${YELLOW}View All users"
