@@ -39,9 +39,9 @@ echo -e "${GREEN} ★ OpenSSH Port : 22     " &&
 echo -e "${GREEN} ★ SSL Port : 443     " &&
 echo -e "${GREEN} ★ Dropbear Port : 80     " &&
 echo -e "${GREEN} ★ Proxy Port : 8080     " &&
-echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " &&
+echo -e "${GREEN}======================    " &&
 echo -e "${GREEN} ★ Badvpn : 7300     " &&
-echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " &&
+echo -e "${GREEN}======================     " &&
 echo -e "${GREEN} ☬[⍣]  SL EHI BOT [⍣]☬     " ||
 echo -e "${RED}\nFailed to modify user $username please try again.${ENDCOLOR}"
 
