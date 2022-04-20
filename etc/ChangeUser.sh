@@ -30,19 +30,18 @@ clear &&
 echo -e "${YELLOW}===================" &&
 echo -e "${GREEN}꧁SLEHIBOT-SSH꧂      " &&
 echo -e "${YELLOW}===================" &&
-echo -e "${GREEN}\nIP/Host :${YELLOW} $pub_ip" 
-echo -e "${GREEN}\nUsername :${YELLOW} $username" 
-echo -e "${GREEN}\nPassword :${YELLOW} $password" 
-echo -e "${GREEN}\nExpire Date :${YELLOW} $exd ${ENDCOLOR}" &&
-
-echo -e "${GREEN}෴Default  Server Ports෴     " 
-echo -e "${GREEN} ★ OpenSSH Port : 22     " 
-echo -e "${GREEN} ★ SSL Port : 443     " 
-echo -e "${GREEN} ★ Dropbear Port : 80     " 
-echo -e "${GREEN} ★ Proxy Port : 8080     " 
-echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " 
-echo -e "${GREEN} ★ Badvpn : 7300     " 
-echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " 
+echo -e "${GREEN}\nIP/Host :${YELLOW} $pub_ip" &&
+echo -e "${GREEN}Username :${YELLOW} $username" &&
+echo -e "${GREEN}Password :${YELLOW} $password" &&
+echo -e "${GREEN}Expire Date :${YELLOW} $exd ${ENDCOLOR}" &&
+echo -e "${GREEN}\n෴Default  Server Ports෴     " &&
+echo -e "${GREEN} ★ OpenSSH Port : 22     " &&
+echo -e "${GREEN} ★ SSL Port : 443     " &&
+echo -e "${GREEN} ★ Dropbear Port : 80     " &&
+echo -e "${GREEN} ★ Proxy Port : 8080     " &&
+echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " &&
+echo -e "${GREEN} ★ Badvpn : 7300     " &&
+echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " &&
 echo -e "${GREEN} ☬[⍣]  SL EHI BOT [⍣]☬     " ||
 echo -e "${RED}\nFailed to modify user $username please try again.${ENDCOLOR}"
 
