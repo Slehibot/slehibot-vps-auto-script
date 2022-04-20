@@ -44,7 +44,6 @@ echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     "
 echo -e "${GREEN} ★ Badvpn : 7300     " 
 echo -e "${GREEN} ▰▱▰▱▰▱▰▱▰▱▰▱     " 
 echo -e "${GREEN} ☬[⍣]  SL EHI BOT [⍣]☬     " 
- ||
 echo -e "${RED}\nFailed to modify user $username please try again.${ENDCOLOR}"
 
 #return to panel
