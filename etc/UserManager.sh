@@ -39,19 +39,20 @@ echo -e "${GREEN}   ❣️ㅤSLEHIBOT VPS MANAGERㅤ❣️         "    &&
 echo -e "${YELLOW}================================      " &&
 echo ""
 echo -e "${GREEN}❖─────༻  SSH ACCOUNT ༺─────❖      " &&
-echo
+echo ""
 echo -e "${GREEN}\nIP/Host   :${YELLOW} $pub_ip" &&
 echo -e "${GREEN}Username    :${YELLOW} $username" &&
 echo -e "${GREEN}Password    :${YELLOW} $password" &&
 echo -e "${GREEN}Expire Date :${YELLOW} $exd ${ENDCOLOR}" &&
+echo ""
 
-echo -e "${GREEN}\n☬ SLEHIBOT Auto Script Ports ☬     "  &&
+echo -e "${GREEN}☬ SLEHIBOT Auto Script Ports ☬     "  &&
 echo ""
 echo -e "${GREEN} ★ OpenSSH Port   : 22     " &&
 echo -e "${GREEN} ★ SSL Port       : 443     " &&
 echo -e "${GREEN} ★ Dropbear Port  : 80     " &&
 echo -e "${GREEN} ★ Proxy Port     : 8080     " &&
-echo -e "${GREEN} ★ Badvpn         : 7300
+echo -e "${GREEN} ★ Badvpn         : 7300     " &&
 echo -e "${GREEN}❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖     " &&
 echo -e "${GREEN} ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬     " &&
 echo -e "${GREEN}❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖    " &&
