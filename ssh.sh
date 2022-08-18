@@ -47,7 +47,7 @@ pre_req()
         ufw allow 443/tcp
 	ufw allow 444/tcp
         ufw allow 22/tcp
-        ufw allow 80/tcp
+        ufw allow 550/tcp
         ufw allow 110/tcp
         ufw allow 8080/tcp
         ufw allow 7300/tcp
@@ -67,7 +67,7 @@ sed -i 's/#Banner none/Banner \/etc\/banner/' /etc/ssh/sshd_config
 mv /etc/default/dropbear /etc/default/dropbear.backup
 cat << EOF > /etc/default/dropbear
 NO_START=0
-DROPBEAR_PORT=80
+DROPBEAR_PORT=550
 DROPBEAR_EXTRA_ARGS="-p 110"
 DROPBEAR_BANNER="/etc/banner"
 DROPBEAR_RSAKEY="/etc/dropbear/dropbear_rsa_host_key"
