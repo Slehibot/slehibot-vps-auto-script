@@ -13,6 +13,16 @@ clear
 
 pub_ip=$(wget -qO- https://ipecho.net/plain ; echo)
 
+old_db_port=$(grep "DROPBEAR_PORT=" /etc/default/dropbear | sed 's/=/= /'  | awk '{print$2}')
+
+old_db_ssl=$(grep "accept =" /etc/stunnel/stunnel.conf | sed ':a;N;$!ba;s/\n/ /g' | sed 's/accept =//g' | awk '{print$1}')
+
+old_op_ssl=$(grep "accept =" /etc/stunnel/stunnel.conf | sed ':a;N;$!ba;s/\n/ /g' | sed 's/accept =//g' | awk '{print$2}')
+
+old_squid_port=$(sed /^#/d /etc/squid/squid.conf | grep "http_port" | awk '{print$2}')
+
+old_udpgw_port=$(cat /etc/systemd/system/udpgw.service | sed 's/ /\n/g'  | grep "127.0.0.1:" | sed 's/:/ /' | awk '{print$2}')
+
 
 #add users
 
@@ -48,11 +58,11 @@ echo ""
 
 echo -e "${GREEN}☬ SLEHIBOT Auto Script Ports ☬     "  &&
 echo ""
-echo -e "${GREEN} ★ OpenSSH Port   : 22     " &&
-echo -e "${GREEN} ★ SSL Port       : 443     " &&
-echo -e "${GREEN} ★ Dropbear Port  : 80     " &&
-echo -e "${GREEN} ★ Proxy Port     : 8080     " &&
-echo -e "${GREEN} ★ Badvpn         : 7300     " &&
+echo -e "${GREEN} ★ OpenSSH Port   : $old_op_ssl     " &&
+echo -e "${GREEN} ★ SSL Port       : $old_db_ssl     " &&
+echo -e "${GREEN} ★ Dropbear Port  : $old_db_port     " &&
+echo -e "${GREEN} ★ Proxy Port     : $old_squid_port     " &&
+echo -e "${GREEN} ★ Badvpn         : $old_udpgw_port     " &&
 echo -e "${GREEN}❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖     " &&
 echo -e "${GREEN} ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬     " &&
 echo -e "${GREEN}❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖    " &&
